@@ -1,0 +1,145 @@
+$font-stack: 'Open Sans', sans-serif;
+
+$colors: (
+	teal: teal,
+	red: #c11a1a,
+	purple: #7a2c92,
+	jade: #2c925f,
+	avocado: #4e922c,
+	mustard: #a9ad1a,
+);
+
+@each $colorName, $colorValue in $colors {
+	.#{$colorName}-theme {
+		background-color: darken($colorValue, 15%);
+
+		.logo {
+			color: $colorValue;
+		}
+
+		.linkbox a {
+			color: mix(#fff, $colorValue, 50%);
+		}
+
+		button {
+			background-color: $colorValue;
+
+			&:hover {
+				background-color: mix(#fff, $colorValue, 20%);
+			}
+		}
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: $font-stack;
+}
+
+body {
+	font-family: Oswald, sans-serif;
+	line-height: 1.2;
+	background-image: url(images/texture.png);
+}
+
+.header {
+	text-align: center;
+	padding: 0.5rem;
+	background: #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+}
+
+.logo {
+	margin: 0;
+}
+
+.logo, #genre {
+	font-family: 'Archivo Narrow', $font-stack;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 90%;
+	text-align: center;
+	padding: 1rem;
+}
+
+#genre {
+	font-size: 3rem;
+	color: #fff;
+	text-shadow: 0.05em 0.05em 0.05em rgba(#000, 0.85);
+}
+
+.linkbox {
+	margin-top: 2rem;
+	font-size: 2rem;
+
+	a {
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+a, button {
+	transition: all 0.1s ease-in-out;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: 0;
+	margin: 0 auto;
+	border-radius: 100em;
+	color: #fff;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-family: $font-stack;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+	            0 3px 6px rgba(0,0,0,0.23);
+	text-shadow: 0.025em 0.075em .125em rgba(#000, 0.75);
+
+	&:hover {
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+		            0 6px 6px rgba(0, 0, 0, 0.23);
+	}
+
+	&:active {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+		            0 3px 6px rgba(0,0,0,0.23);
+		transform: translateY(0.125rem);
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.container {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 14px;
+	}
+
+	button {
+		display: block;
+		border-radius: 1rem;
+	}
+}

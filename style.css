@@ -1,0 +1,246 @@
+/* line 13, style.scss */
+.teal-theme {
+  background-color: #003434;
+}
+/* line 16, style.scss */
+.teal-theme .logo {
+  color: teal;
+}
+/* line 20, style.scss */
+.teal-theme .linkbox a {
+  color: #80c0c0;
+}
+/* line 24, style.scss */
+.teal-theme button {
+  background-color: teal;
+}
+/* line 27, style.scss */
+.teal-theme button:hover {
+  background-color: #339999;
+}
+
+/* line 13, style.scss */
+.red-theme {
+  background-color: #7e1111;
+}
+/* line 16, style.scss */
+.red-theme .logo {
+  color: #c11a1a;
+}
+/* line 20, style.scss */
+.red-theme .linkbox a {
+  color: #e08d8d;
+}
+/* line 24, style.scss */
+.red-theme button {
+  background-color: #c11a1a;
+}
+/* line 27, style.scss */
+.red-theme button:hover {
+  background-color: #cd4848;
+}
+
+/* line 13, style.scss */
+.purple-theme {
+  background-color: #491a57;
+}
+/* line 16, style.scss */
+.purple-theme .logo {
+  color: #7a2c92;
+}
+/* line 20, style.scss */
+.purple-theme .linkbox a {
+  color: #bd96c9;
+}
+/* line 24, style.scss */
+.purple-theme button {
+  background-color: #7a2c92;
+}
+/* line 27, style.scss */
+.purple-theme button:hover {
+  background-color: #9556a8;
+}
+
+/* line 13, style.scss */
+.jade-theme {
+  background-color: #1a5739;
+}
+/* line 16, style.scss */
+.jade-theme .logo {
+  color: #2c925f;
+}
+/* line 20, style.scss */
+.jade-theme .linkbox a {
+  color: #96c9af;
+}
+/* line 24, style.scss */
+.jade-theme button {
+  background-color: #2c925f;
+}
+/* line 27, style.scss */
+.jade-theme button:hover {
+  background-color: #56a87f;
+}
+
+/* line 13, style.scss */
+.avocado-theme {
+  background-color: #2f571a;
+}
+/* line 16, style.scss */
+.avocado-theme .logo {
+  color: #4e922c;
+}
+/* line 20, style.scss */
+.avocado-theme .linkbox a {
+  color: #a7c996;
+}
+/* line 24, style.scss */
+.avocado-theme button {
+  background-color: #4e922c;
+}
+/* line 27, style.scss */
+.avocado-theme button:hover {
+  background-color: #71a856;
+}
+
+/* line 13, style.scss */
+.mustard-theme {
+  background-color: #686a10;
+}
+/* line 16, style.scss */
+.mustard-theme .logo {
+  color: #a9ad1a;
+}
+/* line 20, style.scss */
+.mustard-theme .linkbox a {
+  color: #d4d68d;
+}
+/* line 24, style.scss */
+.mustard-theme button {
+  background-color: #a9ad1a;
+}
+/* line 27, style.scss */
+.mustard-theme button:hover {
+  background-color: #babd48;
+}
+
+/* line 34, style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 38, style.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 45, style.scss */
+body {
+  font-family: Oswald, sans-serif;
+  line-height: 1.2;
+  background-image: url(images/texture.png);
+}
+
+/* line 51, style.scss */
+.header {
+  text-align: center;
+  padding: 0.5rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* line 58, style.scss */
+.logo {
+  margin: 0;
+}
+
+/* line 62, style.scss */
+.logo, #genre {
+  font-family: "Archivo Narrow", "Open Sans", sans-serif;
+}
+
+/* line 66, style.scss */
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* line 73, style.scss */
+#genre {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.85);
+}
+
+/* line 79, style.scss */
+.linkbox {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+/* line 85, style.scss */
+.linkbox a:hover {
+  color: #fff;
+}
+
+/* line 91, style.scss */
+a, button {
+  transition: all 0.1s ease-in-out;
+}
+
+/* line 95, style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 99, style.scss */
+button {
+  border: 0;
+  margin: 0 auto;
+  border-radius: 100em;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  text-shadow: 0.025em 0.075em 0.125em rgba(0, 0, 0, 0.75);
+}
+/* line 111, style.scss */
+button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+/* line 116, style.scss */
+button:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(0.125rem);
+}
+/* line 122, style.scss */
+button:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 481px) {
+  /* line 128, style.scss */
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 137, style.scss */
+  html {
+    font-size: 14px;
+  }
+
+  /* line 141, style.scss */
+  button {
+    display: block;
+    border-radius: 1rem;
+  }
+}
