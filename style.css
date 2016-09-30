@@ -148,21 +148,22 @@ body {
 .header {
   text-align: center;
   padding: 0.5rem;
-  background: #fff;
+  background: linear-gradient(#fff, #ddd);
+  text-shadow: 0 0.15em 0.05em #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 58, style.scss */
+/* line 60, style.scss */
 .logo {
   margin: 0;
 }
 
-/* line 62, style.scss */
+/* line 64, style.scss */
 .logo, #genre {
   font-family: "Archivo Narrow", "Open Sans", sans-serif;
 }
 
-/* line 66, style.scss */
+/* line 68, style.scss */
 .container {
   margin: 0 auto;
   max-width: 90%;
@@ -170,34 +171,34 @@ body {
   padding: 1rem;
 }
 
-/* line 73, style.scss */
+/* line 75, style.scss */
 #genre {
   font-size: 3rem;
   color: #fff;
   text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.85);
 }
 
-/* line 79, style.scss */
+/* line 81, style.scss */
 .linkbox {
   margin-top: 2rem;
   font-size: 2rem;
 }
-/* line 85, style.scss */
+/* line 87, style.scss */
 .linkbox a:hover {
   color: #fff;
 }
 
-/* line 91, style.scss */
+/* line 93, style.scss */
 a, button {
   transition: all 0.1s ease-in-out;
 }
 
-/* line 95, style.scss */
+/* line 97, style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 99, style.scss */
+/* line 101, style.scss */
 button {
   border: 0;
   margin: 0 auto;
@@ -209,22 +210,22 @@ button {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-shadow: 0.025em 0.075em 0.125em rgba(0, 0, 0, 0.75);
 }
-/* line 111, style.scss */
+/* line 113, style.scss */
 button:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-/* line 116, style.scss */
+/* line 118, style.scss */
 button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(0.125rem);
 }
-/* line 122, style.scss */
+/* line 124, style.scss */
 button:focus {
   outline: none;
 }
 
 @media screen and (min-width: 481px) {
-  /* line 128, style.scss */
+  /* line 130, style.scss */
   .container {
     position: absolute;
     left: 50%;
@@ -233,12 +234,12 @@ button:focus {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 137, style.scss */
+  /* line 139, style.scss */
   html {
     font-size: 14px;
   }
 
-  /* line 141, style.scss */
+  /* line 143, style.scss */
   button {
     display: block;
     border-radius: 1rem;

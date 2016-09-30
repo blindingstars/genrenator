@@ -232,6 +232,7 @@ const dictionary = {
 		"So 2000 and late.",
 		"Ugh, hipsters.",
 		"Who are you, my grandpa?",
+		"Yeah, no.",
 	],
 };
 
