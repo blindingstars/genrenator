@@ -267,8 +267,8 @@ const defaultOptions = {
 			"Yo bae, want to come over for some ${genre} and chill?",
 			"Totally over ${genre}",
 			"Thinking of starting a ${genre} band. Who's in?",
-			"Listening to: ${genre}",
-			"${genre} is lit af %F0%9F%94%A5%F0%9F%94%A5%F0%9F%94%A5",
+			"Listening to: ${genre} %F0%9F%8E%B5%20",
+			"${genre} is lit af %F0%9F%94%A5%F0%9F%94%A5%F0%9F%94%A5%20",
 		],
 	},
 };
@@ -415,7 +415,7 @@ function createLinks(genre, options) {
 	let links = [];
 
 	if (options.enableTwitter) {
-		const createTweetUrl = tweet => `https://twitter.com/intent/tweet?text=${tweet}%20%23genrenator%20http%3A%2F%2Fgenrenator.surge.sh`
+		const createTweetUrl = tweet => `https://twitter.com/intent/tweet?text=${tweet}%20%23genrenator%20https%3A%2F%2Fblindingstars.github.io%2Fgenrenator%2F`
 
 		let icon = document.createElement('i');
 		icon.classList.add('fa', `fa-${options.twitterIcon}`);
