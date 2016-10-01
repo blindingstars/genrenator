@@ -274,15 +274,28 @@ function randomArray(array) {
 	return array[index];
 }
 
+function randomArrayExclude(array, excludeValues=[]) {
+	while(true) {
+		let value = randomArray(array);
+		if (excludeValues.indexOf(value) === -1) {
+			return value;
+		}
+	}
+}
+
+function randomArrayExceptLocalStorage(array, localStorageKey) {
+	let previous = localStorage[localStorageKey];
+	let value = randomArrayExclude(array, [previous]);
+	localStorage[localStorageKey] = value;
+	return value;
+}
+
 function randomUniqueElements(array, min, max) {
 	const count = Math.round(min + (max-min) * Math.random());
 	let output = [];
 
-	while (output.length < count) {
-		let element = randomArray(array);
-		if (output.indexOf(element) === -1) {
-			output.push(element);
-		}
+	for(let i=0; i < count; i++) {
+		output.push(randomArrayExclude(array, output));
 	}
 
 	return output;
@@ -386,9 +399,8 @@ function makeHtmlGenre(segments) {
 
 function assignTheme(options) {
 	let themes = options.themes;
-	let randomColor = randomArray(themes);
 	let colorClasses = themes.map(c => `${c}-theme`);
-
+	let randomColor = randomArrayExceptLocalStorage(themes, 'genrenatorPreviousTheme');
 	let page = document.querySelector(options.pageSelector);
 	page.classList.remove(...colorClasses);
 	page.classList.add(randomColor + '-theme');
@@ -405,7 +417,7 @@ function createLinks(genre, options) {
 		icon.classList.add('fa', `fa-${options.twitterIcon}`);
 
 		let link = document.createElement('a');
-		let tweet = randomArray(twitterTemplates).replace('${genre}', genre);
+		let tweet = randomArrayExceptLocalStorage(twitterTemplates, 'genrenatorPreviousTweet').replace('${genre}', genre);
 		link.setAttribute('href', createTweetUrl(tweet));
 		link.setAttribute('target', '_blank');
 
@@ -450,7 +462,7 @@ function genrenate(defaultOptions) {
 
 	// Prepare button
 	let button = document.querySelector(options.buttonSelector);
-	button.innerText = randomArray(options.dictionary.buttonLabels);
+	button.innerText = randomArrayExceptLocalStorage(options.dictionary.buttonLabels, 'genrenatorPreviousButton');
 
 	assignTheme(options);
 
