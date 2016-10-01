@@ -13,12 +13,16 @@ const defaultOptions = {
 	searchIcon: 'search',
 
 	themes: [
-		'teal',
-		'red',
-		'purple',
-		'jade',
 		'avocado',
+		'grey',
+		'jade',
+		'latte',
 		'mustard',
+		'pumpkin',
+		'purple',
+		'raspberry',
+		'red',
+		'teal',
 	],
 
 	dictionary: {
