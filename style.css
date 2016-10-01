@@ -7,7 +7,7 @@
   color: teal;
 }
 /* line 20, style.scss */
-.teal-theme .linkbox a {
+.teal-theme #linkbox a {
   color: #80c0c0;
 }
 /* line 24, style.scss */
@@ -28,7 +28,7 @@
   color: #c11a1a;
 }
 /* line 20, style.scss */
-.red-theme .linkbox a {
+.red-theme #linkbox a {
   color: #e08d8d;
 }
 /* line 24, style.scss */
@@ -49,7 +49,7 @@
   color: #7a2c92;
 }
 /* line 20, style.scss */
-.purple-theme .linkbox a {
+.purple-theme #linkbox a {
   color: #bd96c9;
 }
 /* line 24, style.scss */
@@ -70,7 +70,7 @@
   color: #2c925f;
 }
 /* line 20, style.scss */
-.jade-theme .linkbox a {
+.jade-theme #linkbox a {
   color: #96c9af;
 }
 /* line 24, style.scss */
@@ -91,7 +91,7 @@
   color: #4e922c;
 }
 /* line 20, style.scss */
-.avocado-theme .linkbox a {
+.avocado-theme #linkbox a {
   color: #a7c996;
 }
 /* line 24, style.scss */
@@ -112,7 +112,7 @@
   color: #a9ad1a;
 }
 /* line 20, style.scss */
-.mustard-theme .linkbox a {
+.mustard-theme #linkbox a {
   color: #d4d68d;
 }
 /* line 24, style.scss */
@@ -179,26 +179,30 @@ body {
 }
 
 /* line 81, style.scss */
-.linkbox {
+#linkbox {
   margin-top: 2rem;
   font-size: 2rem;
 }
-/* line 87, style.scss */
-.linkbox a:hover {
+/* line 85, style.scss */
+#linkbox a {
+  margin: 0.5rem;
+}
+/* line 88, style.scss */
+#linkbox a:hover {
   color: #fff;
 }
 
-/* line 93, style.scss */
+/* line 94, style.scss */
 a, button {
   transition: all 0.1s ease-in-out;
 }
 
-/* line 97, style.scss */
+/* line 98, style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 101, style.scss */
+/* line 102, style.scss */
 button {
   border: 0;
   margin: 0 auto;
@@ -210,22 +214,22 @@ button {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-shadow: 0.025em 0.075em 0.125em rgba(0, 0, 0, 0.75);
 }
-/* line 113, style.scss */
+/* line 114, style.scss */
 button:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-/* line 118, style.scss */
+/* line 119, style.scss */
 button:active {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(0.125rem);
 }
-/* line 124, style.scss */
+/* line 125, style.scss */
 button:focus {
   outline: none;
 }
 
 @media screen and (min-width: 481px) {
-  /* line 130, style.scss */
+  /* line 131, style.scss */
   .container {
     position: absolute;
     left: 50%;
@@ -234,12 +238,12 @@ button:focus {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 139, style.scss */
+  /* line 140, style.scss */
   html {
     font-size: 14px;
   }
 
-  /* line 143, style.scss */
+  /* line 144, style.scss */
   button {
     display: block;
     border-radius: 1rem;

@@ -17,7 +17,7 @@ $colors: (
 			color: $colorValue;
 		}
 
-		.linkbox a {
+		#linkbox a {
 			color: mix(#fff, $colorValue, 50%);
 		}
 
@@ -78,11 +78,12 @@ body {
 	text-shadow: 0.05em 0.05em 0.05em rgba(#000, 0.85);
 }
 
-.linkbox {
+#linkbox {
 	margin-top: 2rem;
 	font-size: 2rem;
 
 	a {
+		margin: 0.5rem;
 
 		&:hover {
 			color: #fff;
