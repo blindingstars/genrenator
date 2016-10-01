@@ -5,6 +5,20 @@ const defaultOptions = {
 	maxSuffixes: 1,
 	outputSelector: '#genre',
 	buttonSelector: '#button',
+	pageSelector: '#genrenator',
+	enableTwitter: true,
+	enableSearch: true,
+	twitterIcon: 'twitter',
+	searchIcon: 'search',
+
+	themes: [
+		'teal',
+		'red',
+		'purple',
+		'jade',
+		'avocado',
+		'mustard',
+	],
 };
 
 const dictionary = {
@@ -246,17 +260,6 @@ const dictionary = {
 	],
 };
 
-const pageThemes = {
-	themes: [
-		'teal',
-		'red',
-		'purple',
-		'jade',
-		'avocado',
-		'mustard',
-	]
-};
-
 function randomArray(array) {
 	const index = Math.round(Math.random() * (array.length - 1));
 	return array[index];
@@ -371,6 +374,16 @@ function makeHtmlGenre(segments) {
 	return output;
 }
 
+function assignTheme(options) {
+	let themes = options.themes;
+	let randomColor = randomArray(themes);
+	let colorClasses = themes.map(c => `${c}-theme`);
+
+	let page = document.querySelector(options.pageSelector);
+	page.classList.remove(...colorClasses);
+	page.classList.add(randomColor + '-theme');
+}
+
 function regenrenate(defaultOptions) {
 	let options = JSON.parse(JSON.stringify(defaultOptions));
 
@@ -392,6 +405,8 @@ function regenrenate(defaultOptions) {
 
 	let button = document.querySelector(options.buttonSelector);
 	button.innerText = randomArray(dictionary.buttonLabels);
+
+	assignTheme(options);
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
